@@ -1,5 +1,7 @@
 # pplib - Elevate processes to Protected Processes
 
+This project utilizes executing arbitrary code in the kernel by using libcapcom: https://github.com/notscimmy/libcapcom
+
 ## Protected Processes
 Windows' security model defines that a process running with debug privileges, such as under an administrative account, can request access to any right to other processes running on the machine.  Such rights include the ability to:  
 * Read/write arbitrary process memory
