@@ -138,5 +138,12 @@ private:
 			objecttable = 0x418;
 			vadroot = 0x628;
 		}
+		else if (osVersion.dwBuildNumber == 17763)
+		{
+			protection = 0x6CA;
+			flags2 = 0x820;
+			objecttable = 0x418;
+			vadroot = 0x628;
+		}
 	}
 };
