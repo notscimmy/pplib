@@ -6,9 +6,11 @@ using namespace native::structs;
 
 bool elevate_ppl()
 {
+	if (!kernel_offsets::init()) return false;
+
 	if (!init_exploit()) return false;
 
-	kernel_offsets::init();
+
 
 	execute_in_kernel([](MmGetSystemRoutineAddress_t _MmGetSystemRoutineAddress)
 	{

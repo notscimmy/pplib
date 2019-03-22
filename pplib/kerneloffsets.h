@@ -31,7 +31,7 @@ public:
 	static uint64_t objecttable;
 	static uint64_t vadroot;
 
-	static void init()
+	static bool init()
 	{
 		windows_version win_ver = get_windows_version();
 
@@ -40,16 +40,18 @@ public:
 		{
 		case WINDOWS7:
 			init_win7();
-			break;
+			return true;
 		case WINDOWS8:
 			init_win8();
-			break;
+			return true;
 		case WINDOWS81:
 			init_win81();
-			break;
+			return true;
 		case WINDOWS10:
 			init_win10();
-			break;
+			return true;
+		default:
+			return false;
 		}
 	}
 
