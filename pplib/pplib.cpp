@@ -29,7 +29,7 @@ bool elevate_ppl()
 
 		windows_version version = kernel_offsets::version;
 		if (version == WINDOWS7)
-			*pPPL |= 1 << 0xB;
+			*(DWORD*)pPPL |= 1 << 0xB;
 		else if (version == WINDOWS8)
 			*pPPL = true;
 		else if (version == WINDOWS81 || version == WINDOWS10)
